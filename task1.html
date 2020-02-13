@@ -1,0 +1,71 @@
+<html>
+<head>
+<div class="nav-bar">
+
+<h1 id="demo"style="color:black ; display: block;text-align: center; padding: 10px 10px;background-color:gray">Gallery</h1><br>
+
+</div>
+<style>
+img {
+  border: 2px solid #ddd;
+  padding: 5px;
+  height: 100px;
+  width: 150px;
+}
+
+img:hover {
+  
+  box-shadow:0px 0px 2px 2px rgba(0, 140, 186, 0.5);
+}
+</style>
+</head>
+<body>
+
+<img onmouseover="changeImg(this)" onmouseout="normalImg(this)"src="c5.PNG">
+<img onmousedown="changeImg(this)" onmouseout="normalImg(this)"src="c4.PNG" >
+<a target="_blank" href="c3.PNG">
+  <img src="c3.PNG" style="width:180px">
+</a>
+<img src="c6.PNG" onclick="window.open(this.src)"  >
+
+<img id="test1"src="c8.PNG" ondblclick="newPage(this)">
+<p id="demo1">
+<button onclick="mymsg()"  >CLICK HERE</button>
+<button onclick="oldmsg()" style="text-align:center" >Reset</button>
+</p>
+
+<script>
+function changeImg(x) {
+  x.style.height = "170px";
+  x.style.width = "170px";
+}
+
+function normalImg(x) {
+  x.style.height = "100px";
+  x.style.width = "100px";
+}
+function newPage(x){
+  alert("image will change");
+  
+  x.src="c7.png";
+  x.style.height="100px";
+  x.style.height="100px";
+}
+function mymsg() {
+  document.getElementById("demo").innerHTML = "DOG's GALLERY";
+}
+function oldmsg() {
+  document.getElementById("demo").innerHTML = "GALLERY";
+}
+
+
+
+</script>
+<p>First Image is for mouse over and out</p>
+<p>Second Image is for mouse down and out</p>
+<p>Third Image is for image reference </p>
+<p>Fourth Image is for on click</p>
+<p>Fivth Image is for on double click</p>
+<p> click here is to change the title name and reset is to change to original title name </p>
+</body>
+</html>
